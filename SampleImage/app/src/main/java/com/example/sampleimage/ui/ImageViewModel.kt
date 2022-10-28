@@ -12,6 +12,11 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+
+/*
+ViewModel with live data
+ */
+
 @HiltViewModel
 class ImageViewModel @Inject constructor(
     private val repository: Repository

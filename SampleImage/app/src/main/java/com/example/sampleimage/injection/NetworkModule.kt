@@ -11,6 +11,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+
+/*
+Networkmodule class is to setting up the network, having base url to fetch api
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {

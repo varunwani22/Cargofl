@@ -5,6 +5,9 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/*
+Api Service class to provide service
+ */
 interface ApiService {
     @GET("v1/images/search")
     suspend fun gettingImages(

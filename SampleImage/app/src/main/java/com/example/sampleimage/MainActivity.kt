@@ -33,23 +33,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        imageViewModel.gettingImages(20, 1, Constant.ORDER)
+        imageViewModel.gettingImages(20, 1, Constant.ORDER) // api calling
         setRecyclerData()
         getObserverData()
         setPagination()
     }
 
+    /*
+    Setting the pagination
+     */
     private fun setPagination() {
         binding.recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 if (!recyclerView.canScrollVertically(1) && dy > 0) {
-                    imageViewModel.gettingImages(10, ++page, Constant.ORDER)
+                    imageViewModel.gettingImages(10, ++page, Constant.ORDER) //api calling
                 }
 
             }
         })
     }
 
+
+    /*
+    Setting RecyclerView
+     */
     private fun setRecyclerData() {
         imageAdapter = ImageResponseAdapter()
         binding.recyclerView.apply {
@@ -58,6 +65,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+    /*
+    Subscribing the obeservable data
+     */
     private fun getObserverData() {
         imageViewModel.imageResponseLiveData.observe(this) {
             when (it) {

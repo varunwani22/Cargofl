@@ -11,6 +11,10 @@ import com.example.sampleimage.models.ImageResponseModelItem
 
 class ImageResponseAdapter : RecyclerView.Adapter<ImageResponseAdapter.ImageResponseViewHolder>() {
 
+
+    /*
+    view Holder class used to hold the view of adapter
+     */
     inner class ImageResponseViewHolder(private val binding: ItemViewLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun setBinding(data: ImageResponseModelItem) {
