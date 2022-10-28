@@ -1,5 +1,5 @@
 <h1>Cat Images App</h1>
-<p>\The app showcase images of cats with staggered grid view</p>
+<p>The app showcase images of cats with staggered grid view</p>
 <hr>
 <h3>Used Technologies</h3>
 <ul>
